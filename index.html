@@ -1,0 +1,33 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Toast</title>
+  <script type="text/javascript">
+    var number = 0;
+
+    function increment() {
+        number++;
+        showNumber(number);
+    }
+
+    function showNumber(num) {
+        document.getElementById("displayDiv").innerHTML = num;
+    }
+
+    window.onload = function() {
+        setInterval("increment()", 5000);
+        showNumber(number);
+    }
+  </script>
+</head>
+
+<body>
+
+  <div style="text-align: center">
+  <a href="link">  
+  <img src="images/fallingtoast.gif" align="center"></a>
+  </div>
+
+  <h3 style="text-align: center">Toast has fallen a total of <span id="displayDiv"></span> times</h3>
+</body>
+</html>
